@@ -1,0 +1,55 @@
+Object oriented design is an iterative and exploratory process 
+
+Abstraction, Information Hiding and Encapsulation  
+
+Abstraction = elemination of inessential details
+Information Hiding = providing only the information the client needs to know 
+Encapsulation = bundling operations to access related data as a data abstraction 
+Data Abstraction can be achieved by creating classes 
+
+An object should not have more than one responsibility 
+
+Responsibility what you know and maintain 
+
+Well designed objects have clear responsibilities 
+Responsibility driven design What actions is this object responsibile for 
+What information does the object share 
+Multiple responsibilities impacts cohesion - an object does too many things is overly complex 
+
+
+
+
+Every domain concept that plays a role in the application and assumes a responsibility is a potential object in software design 
+
+Abstract classes are tied to a hierarchy, but you can provide default implementations 
+
+Lot of little pieces 
+Good code invariably has small methods and small objects.  Only by refactoring the system into many small pieces of state and function can you hope
+to satisfy the once and only once rule.
+
+
+The point is that objects should encapsulate their behaviour you speak to their interface by sending a message. the method is internal you should not know it.
+
+
+Behaviour should be associated with the objects responsible for the associated state .
+
+Avoid defining behaviour for which another object is responsible.
+
+Information hiding : a component should provide all and only the information that the user needs effectively use it 
+
+Information hiding protects both the provider and the client from changes in the implementation
+
+Everything is an object 
+
+Every domain that plays a role in the application and assumes a responsibility is a potential object in the software design 
+
+
+Enable small incremental changes by designing software around stable abstractions and interchangeable parts
+
+
+As a rule state should be private to an object.  In certain cases inherited state should be accessible to subclass instances /
+
+Avoid public or package scope state as these will violate encapsulation and make your design more fragile 
+Changes to public state will impact all clients who make use of it.
+
+
