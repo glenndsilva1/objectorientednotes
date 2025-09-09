@@ -1,0 +1,44 @@
+1️ Currying (argument transformation)
+const add = x => y => x + y;
+
+const result = add(10)(20);
+
+Diagram
+add
+ └── takes x=10
+      └── returns function(y) => 10 + y
+           └── now call with y=20
+                └── 10 + 20 = 30
+
+
+👉 Flow: arguments go step by step, no wrapping of functions, just breaking down parameters.
+
+2 Decorator (behavior transformation)
+const identity = x => x;
+
+const withAdder = base => fn => value => fn(value) + base;
+
+const add10 = withAdder(10)(identity);
+
+const result = add10(20);
+
+Diagram
+identity(x) = x
+
+withAdder
+ └── takes base=10
+      └── takes fn=identity
+           └── returns function(value)
+                 └── fn(value) + base
+                 └── identity(20) + 10
+                 └── 20 + 10 = 30
+
+
+👉 Flow: a function (identity) is passed in, then wrapped with extra behavior (+ base).
+This is decoration, not just argument passing.
+
+✅ So the key visual difference:
+
+Currying = 🔄 argument → argument → result.
+
+Decorator = 🎁 function → wrapped function → result.
